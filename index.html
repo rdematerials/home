@@ -428,6 +428,77 @@
             color: var(--uci-blue);
         }
 
+        /* Products list */
+        .products-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .product {
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 22px;
+            align-items: start;
+            background: white;
+            padding: 22px 26px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--uci-blue);
+        }
+
+        .product-year {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--uci-blue);
+            line-height: 1;
+        }
+
+        .product-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 3px 9px;
+            border-radius: 10px;
+            font-weight: bold;
+            white-space: nowrap;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .product-tag.journal      { background: var(--uci-blue);   color: white; }
+        .product-tag.proceedings  { background: #6c5ce7;            color: white; }
+        .product-tag.conference   { background: var(--uci-gold);   color: var(--uci-blue-dark); }
+        .product-tag.poster       { background: #00a878;            color: white; }
+        .product-tag.thesis       { background: #c44536;            color: white; }
+        .product-tag.dataset      { background: #555;                color: white; }
+
+        .product-body {
+            font-size: 0.95rem;
+        }
+
+        .product-citation {
+            margin: 0 0 8px;
+            color: #333;
+            line-height: 1.55;
+        }
+
+        .product-link {
+            color: var(--uci-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .product-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .product { grid-template-columns: 1fr; gap: 10px; }
+        }
+
         /* Workshop Archive Card */
         .archive-card {
             background: linear-gradient(135deg, var(--uci-blue-dark) 0%, var(--uci-blue) 100%);
@@ -732,6 +803,7 @@
             <li><a href="#thrusts">Research Thrusts</a></li>
             <li><a href="#timeline">Timeline</a></li>
             <li><a href="#people">People</a></li>
+            <li><a href="#products">Products</a></li>
             <li><a href="#archive">Workshop Archive</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1013,6 +1085,24 @@
                 <div class="name">Hasan Jame</div>
                 <div class="affil">Carnegie Mellon University</div>
             </div>
+        </div>
+
+        <h2 class="section-title" id="products">Products</h2>
+        <p class="section-subtitle">Publications, presentations, and other research outputs produced under the project.</p>
+
+        <div class="products-list">
+
+            <div class="product">
+                <span class="product-year">2026</span>
+                <div class="product-body">
+                    <p class="product-citation">
+                        <span class="product-tag conference">Conference Abstract</span>
+                        D. K. Menendez, M. W. Ross, D. R. Mumm, L. Valdevit, X. Shi, &ldquo;Component and material failure mechanisms in miniaturized rotating detonation engines,&rdquo; <em>14th International Workshop on Detonation for Propulsion (IWDP 2026)</em>, Keio University, Yokohama, Japan, May 4–8, 2026.
+                    </p>
+                    <a class="product-link" href="https://www.detonation-society.jp/assets/pdf/Oral50+1_Abstract_PDF(iwdp2026)/77_XianShi.pdf" target="_blank" rel="noopener">View extended abstract (PDF) →</a>
+                </div>
+            </div>
+
         </div>
 
         <h2 class="section-title" id="archive">Workshop Archive</h2>
